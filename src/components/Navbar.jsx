@@ -53,7 +53,7 @@ const Navbar = () => {
                               bg-gradient-to-r from-cyan-500 to-blue-600 transition-all
                               duration-500 hover:from-cyan-400 hover:to-blue-500 hover:scale-105
                               shadow-lg transform transition-transform">
-              Hire Me
+              Download CV
             </button>
           </div>
 
@@ -100,7 +100,7 @@ const Navbar = () => {
           <button className="w-full glow-button mt-3 px-5 py-3 rounded-full text-white font-bold
                             bg-gradient-to-r from-cyan-500 to-blue-600 transform transition-transform
                             hover:scale-105">
-            Hire Me
+            Download CV
           </button>
         </div>
       </div>
