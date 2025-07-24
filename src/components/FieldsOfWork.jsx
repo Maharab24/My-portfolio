@@ -1,10 +1,18 @@
-import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef, useEffect } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const FieldsOfWork = () => {
   const containerRef = useRef(null);
+  const controls = useAnimation();
+  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
-  // Fields data with new animation properties
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
+
+  // Fields data with deep 3D animation properties
   const fields = [
     {
       title: "Artificial Intelligence",
@@ -12,10 +20,24 @@ const FieldsOfWork = () => {
       color: "from-purple-500 to-indigo-600",
       icon: "🤖",
       animation: {
-        initial: { x: -100, opacity: 0, rotateY: 90 },
-        animate: { x: 0, opacity: 1, rotateY: 0 },
-        transition: { duration: 0.7, type: "spring", bounce: 0.3 },
-        hover: { y: -15, rotate: -1, boxShadow: "0 25px 50px -12px rgba(192, 132, 252, 0.3)" }
+        hidden: { z: -500, scale: 0.2, opacity: 0, rotateY: 45 },
+        visible: {
+          z: 0,
+          scale: 1,
+          opacity: 1,
+          rotateY: 0,
+          transition: {
+            duration: 0.9,
+            type: "spring",
+            bounce: 0.3
+          }
+        },
+        hover: {
+          y: -15,
+          z: 20,
+          boxShadow: "0 25px 50px -12px rgba(192, 132, 252, 0.3)",
+          transition: { duration: 0.3 }
+        }
       }
     },
     {
@@ -24,10 +46,25 @@ const FieldsOfWork = () => {
       color: "from-cyan-400 to-blue-500",
       icon: "💻",
       animation: {
-        initial: { y: 100, opacity: 0, scale: 0.8 },
-        animate: { y: 0, opacity: 1, scale: 1 },
-        transition: { duration: 0.7, type: "spring", bounce: 0.3, delay: 0.1 },
-        hover: { y: -15, rotate: 1, boxShadow: "0 25px 50px -12px rgba(56, 189, 248, 0.3)" }
+        hidden: { z: -500, scale: 0.2, opacity: 0, rotateX: 30 },
+        visible: {
+          z: 0,
+          scale: 1,
+          opacity: 1,
+          rotateX: 0,
+          transition: {
+            duration: 0.9,
+            type: "spring",
+            bounce: 0.3,
+            delay: 0.1
+          }
+        },
+        hover: {
+          y: -15,
+          z: 20,
+          boxShadow: "0 25px 50px -12px rgba(56, 189, 248, 0.3)",
+          transition: { duration: 0.3 }
+        }
       }
     },
     {
@@ -36,10 +73,25 @@ const FieldsOfWork = () => {
       color: "from-green-400 to-emerald-500",
       icon: "🔬",
       animation: {
-        initial: { x: 100, opacity: 0, rotateX: 90 },
-        animate: { x: 0, opacity: 1, rotateX: 0 },
-        transition: { duration: 0.7, type: "spring", bounce: 0.3, delay: 0.2 },
-        hover: { y: -15, rotate: -1, boxShadow: "0 25px 50px -12px rgba(52, 211, 153, 0.3)" }
+        hidden: { z: -500, scale: 0.2, opacity: 0, rotateZ: -20 },
+        visible: {
+          z: 0,
+          scale: 1,
+          opacity: 1,
+          rotateZ: 0,
+          transition: {
+            duration: 0.9,
+            type: "spring",
+            bounce: 0.3,
+            delay: 0.2
+          }
+        },
+        hover: {
+          y: -15,
+          z: 20,
+          boxShadow: "0 25px 50px -12px rgba(52, 211, 153, 0.3)",
+          transition: { duration: 0.3 }
+        }
       }
     },
     {
@@ -48,10 +100,25 @@ const FieldsOfWork = () => {
       color: "from-amber-400 to-orange-500",
       icon: "🏆",
       animation: {
-        initial: { scale: 0, opacity: 0, rotate: 45 },
-        animate: { scale: 1, opacity: 1, rotate: 0 },
-        transition: { duration: 0.7, type: "spring", bounce: 0.4, delay: 0.3 },
-        hover: { y: -15, rotate: 2, boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.3)" }
+        hidden: { z: -500, scale: 0.2, opacity: 0, rotate: 45 },
+        visible: {
+          z: 0,
+          scale: 1,
+          opacity: 1,
+          rotate: 0,
+          transition: {
+            duration: 0.9,
+            type: "spring",
+            bounce: 0.4,
+            delay: 0.3
+          }
+        },
+        hover: {
+          y: -15,
+          z: 20,
+          boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.3)",
+          transition: { duration: 0.3 }
+        }
       }
     }
   ];
@@ -59,6 +126,7 @@ const FieldsOfWork = () => {
   // Floating animation for icons
   const floatAnimation = {
     y: [0, -15, 0],
+    z: [0, 10, 0],
     transition: {
       duration: 3,
       repeat: Infinity,
@@ -74,6 +142,18 @@ const FieldsOfWork = () => {
       duration: 3,
       repeat: Infinity,
       ease: "easeInOut"
+    }
+  };
+
+  // Container animation
+  const containerAnimation = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        when: "beforeChildren"
+      }
     }
   };
 
@@ -113,6 +193,7 @@ const FieldsOfWork = () => {
           animate={{
             y: [0, -30, 0],
             x: [0, (Math.random() - 0.5) * 40, 0],
+            z: [0, 20, 0]
           }}
           transition={{
             duration: Math.random() * 10 + 10,
@@ -127,22 +208,22 @@ const FieldsOfWork = () => {
         {/* Section Title */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, z: -50 }}
+          animate={isInView ? { opacity: 1, y: 0, z: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.h2
             className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             Fields Of My Works
           </motion.h2>
           <motion.p
             className="text-gray-300 max-w-2xl mx-auto text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, z: -30 }}
+            animate={isInView ? { opacity: 1, z: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             Explore the domains where I apply my expertise and passion to create innovative solutions
@@ -150,16 +231,21 @@ const FieldsOfWork = () => {
         </motion.div>
 
         {/* Fields Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
+          variants={containerAnimation}
+          initial="hidden"
+          animate={controls}
+          style={{ perspective: "1000px" }} // Added for 3D effect
+        >
           {fields.map((field, index) => (
             <motion.div
               key={index}
               className="field-card"
-              initial={field.animation.initial}
-              animate={field.animation.animate}
-              transition={field.animation.transition}
-              whileHover={field.animation.hover}
+              variants={field.animation}
+              whileHover="hover"
               whileTap={{ scale: 0.98 }}
+              style={{ transformStyle: "preserve-3d" }} // Added for 3D effect
             >
               <div className={`h-full bg-gradient-to-br ${field.color} rounded-2xl p-6 shadow-xl overflow-hidden relative group`}>
                 {/* Floating icon with depth */}
@@ -187,7 +273,7 @@ const FieldsOfWork = () => {
                   <motion.button
                     className="px-4 py-2 bg-black/30 backdrop-blur-sm rounded-full text-white border border-white/20 relative overflow-hidden group-hover:bg-white/10 transition-colors"
                     onClick={() => console.log(`Viewing projects in ${field.title}`)}
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.05, z: 10 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span className="relative z-10">View Projects</span>
@@ -214,6 +300,7 @@ const FieldsOfWork = () => {
                     animate={{
                       scale: [0, 1, 0],
                       opacity: [0, 0.4, 0],
+                      z: [0, 10, 0]
                     }}
                     transition={{
                       duration: Math.random() * 2 + 1,
@@ -226,7 +313,7 @@ const FieldsOfWork = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
