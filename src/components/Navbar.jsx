@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -14,10 +15,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Skills', path: '/skills' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -33,9 +34,9 @@ const Navbar = () => {
           {/* Left-aligned navigation links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.path}
                 className="text-white hover:text-cyan-300 font-semibold
                           transition duration-300 hover:scale-105
                           relative after:content-[''] after:absolute after:bottom-0 after:left-0
@@ -43,7 +44,7 @@ const Navbar = () => {
                           hover:after:w-full"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -86,16 +87,16 @@ const Navbar = () => {
       }`}>
         <div className="px-4 pt-4 pb-5 space-y-3 bg-gradient-to-b from-indigo-900 to-purple-900 rounded-b-xl">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.path}
               className="block px-4 py-3 rounded-lg text-white font-semibold
                          bg-gradient-to-r from-purple-700/50 to-indigo-700/50
                          transition duration-300 transform hover:scale-105 hover:bg-purple-800/70"
               onClick={() => setIsOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <button className="w-full glow-button mt-3 px-5 py-3 rounded-full text-white font-bold
                             bg-gradient-to-r from-cyan-500 to-blue-600 transform transition-transform
