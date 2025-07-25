@@ -4,6 +4,37 @@ import { FaGithub, FaLinkedin, FaFacebook, FaHeart } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 function Footer() {
+  // Social media links with actual URLs
+  const socialLinks = [
+    {
+      Icon: FaGithub,
+      url: 'https://github.com/Maharab24',
+
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    },
+    {
+      Icon: FaLinkedin,
+      url: 'https://www.linkedin.com/in/maharab-hossain-opi-548294228/',
+
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    },
+    {
+      Icon: FaFacebook,
+      url: 'https://www.facebook.com/maharab.hossain.opi.2024/',
+
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    },
+{
+  Icon: SiGmail,
+  url: 'https://mail.google.com/mail/?view=cm&to=maharabhossainopi24@gmail.com&su=',
+  target: '_blank',
+  rel: 'noopener noreferrer'
+}
+  ];
+
   return (
     <motion.footer
       className="relative overflow-hidden pt-20 pb-12 px-4 md:px-8"
@@ -121,10 +152,13 @@ function Footer() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              {[FaGithub, FaLinkedin, FaFacebook, SiGmail].map((Icon, index) => (
+              {socialLinks.map(({ Icon, url, title, target, rel }, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={url}
+                  title={title}
+                  target={target}
+                  rel={rel}
                   className="text-cyan-100 hover:text-white bg-black/30 backdrop-blur-lg rounded-full p-4 border border-cyan-500/30 hover:border-fuchsia-500/50 relative group"
                   whileHover={{
                     y: -12,
@@ -169,7 +203,7 @@ function Footer() {
                   transition={{ delay: 0.4 + index * 0.1, type: "spring" }}
                 >
                   <motion.a
-                    href="#"
+                    href={`#${item.toLowerCase()}`}
                     className="text-cyan-100/90 hover:text-white flex items-center group text-lg font-medium"
                     whileHover={{
                       x: 15,

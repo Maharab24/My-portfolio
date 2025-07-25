@@ -53,7 +53,7 @@ const Navbar = () => {
                               bg-gradient-to-r from-cyan-500 to-blue-600 transition-all
                               duration-500 hover:from-cyan-400 hover:to-blue-500 hover:scale-105
                               shadow-lg transform transition-transform">
-              Download CV
+              Start Building Together
             </button>
           </div>
 

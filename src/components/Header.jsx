@@ -234,7 +234,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Hire Me
+             Download CV
             </motion.button>
 
             <motion.a
