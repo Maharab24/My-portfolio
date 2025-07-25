@@ -1,26 +1,68 @@
 import React, { useRef } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+
+// Import all skill images
+import reactImg from '../assets/skillSet/react.png';
+import javascriptImg from '../assets/skillSet/js.png';
+
+import pythonImg from '../assets/skillSet/python.png';
+import uiuxImg from '../assets/skillSet/uiux.png';
+
+import mongodbImg from '../assets/skillSet/mongoDb.png';
+import AI from '../assets/skillSet/ai.png';
+import api from '../assets/skillSet/api.png';
+import c from '../assets/skillSet/c.png';
+import cplus from '../assets/skillSet/c++.png';
+import java from '../assets/skillSet/java.png';
+import CompetitveProgramming from '../assets/skillSet/competitiveProgramming.png';
+import css from '../assets/skillSet/css.png';
+import html from '../assets/skillSet/html.png';
+import git from '../assets/skillSet/gitHub.png';
+import tailwind from '../assets/skillSet/tailwind.png';
+import daisyUI from '../assets/skillSet/daisyUI.png';
+import figma from '../assets/skillSet/figma.png';
+import fireBase from '../assets/skillSet/fireBase.png';
+import IoT from '../assets/skillSet/iot.png';
+import jwt from '../assets/skillSet/jwt.png';
+import mySQL from '../assets/skillSet/mySql.png';
+import research from '../assets/skillSet/research.png';
+import visualStudio from '../assets/skillSet/visualStudio.png';
+
+
+
 
 const GoodAt = () => {
   const containerRef = useRef(null);
-  const controls = useAnimation();
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
-  // Skills data with glow colors
-  const skills = [
-    { name: "React", color: "rgba(97, 218, 251, 0.7)", icon: "⚛️" },
-    { name: "JavaScript", color: "rgba(247, 223, 30, 0.7)", icon: "📜" },
-    { name: "Node.js", color: "rgba(139, 195, 74, 0.7)", icon: "🟢" },
-    { name: "Python", color: "rgba(76, 175, 80, 0.7)", icon: "🐍" },
-    { name: "UI/UX Design", color: "rgba(171, 71, 188, 0.7)", icon: "🎨" },
-    { name: "TypeScript", color: "rgba(48, 120, 198, 0.7)", icon: "📝" },
-    { name: "MongoDB", color: "rgba(77, 182, 172, 0.7)", icon: "🍃" },
-    { name: "GraphQL", color: "rgba(229, 53, 171, 0.7)", icon: "📊" },
-    { name: "AWS", color: "rgba(255, 153, 0, 0.7)", icon: "☁️" },
-    { name: "Docker", color: "rgba(41, 182, 246, 0.7)", icon: "🐳" },
-    { name: "Kubernetes", color: "rgba(50, 115, 220, 0.7)", icon: "⚓" },
-    { name: "TensorFlow", color: "rgba(255, 109, 0, 0.7)", icon: "🧠" },
-  ];
+  // Skills data with actual images
+const skills = [
+  { name: "React", color: "rgba(97, 218, 251, 0.7)", image: reactImg },
+  { name: "JavaScript", color: "rgba(247, 223, 30, 0.7)", image: javascriptImg },
+  { name: "Python", color: "rgba(76, 175, 80, 0.7)", image: pythonImg },
+  { name: "UI/UX Design", color: "rgba(171, 71, 188, 0.7)", image: uiuxImg },
+  { name: "MongoDB", color: "rgba(76, 175, 80, 0.7)", image: mongodbImg },
+  { name: "AI", color: "rgba(77, 182, 172, 0.7)", image: AI },
+  { name: "", color: "rgba(255, 112, 67, 0.7)", image: api },
+  { name: "", color: "rgba(33, 150, 243, 0.7)", image: c },
+  { name: "C++", color: "rgba(33, 150, 243, 0.7)", image: cplus },
+  { name: "", color: "rgba(255, 87, 34, 0.7)", image: java },
+  { name: "Competitive Programming", color: "rgba(255, 193, 7, 0.7)", image: CompetitveProgramming },
+  { name: "CSS", color: "rgba(21, 101, 192, 0.7)", image: css },
+  { name: "HTML", color: "rgba(255, 87, 34, 0.7)", image: html },
+  { name: "Git", color: "rgba(255, 109, 0, 0.7)", image: git },
+
+  { name: "Tailwind CSS", color: "rgba(0, 191, 255, 0.7)", image: tailwind },
+  { name: "DaisyUI", color: "rgba(255, 140, 0, 0.7)", image: daisyUI },
+  { name: "Figma", color: "rgba(255, 64, 129, 0.7)", image: figma },
+  { name: "Firebase", color: "rgba(255, 202, 40, 0.7)", image: fireBase },
+  { name: "IoT", color: "rgba(100, 181, 246, 0.7)", image: IoT },
+  { name: "", color: "rgba(255, 143, 0, 0.7)", image: jwt },
+  { name: "", color: "rgba(0, 150, 136, 0.7)", image: mySQL },
+  { name: "Research", color: "rgba(139, 195, 74, 0.7)", image: research },
+  { name: "VS", color: "rgba(33, 150, 243, 0.7)", image: visualStudio }
+];
+
 
   // Floating animation for skills
   const floatAnimation = {
@@ -53,7 +95,7 @@ const GoodAt = () => {
       ref={containerRef}
       className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e2a3b] py-20 px-4 overflow-hidden relative"
     >
-      {/* Animated background elements */}
+      {/* Animated background elements - unchanged */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-purple-500/20 blur-3xl"
         animate={{
@@ -84,7 +126,7 @@ const GoodAt = () => {
         }}
       />
 
-      {/* Floating particles */}
+      {/* Floating particles - unchanged */}
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
@@ -111,7 +153,7 @@ const GoodAt = () => {
       ))}
 
       <div className="max-w-6xl mx-auto relative z-10 min-h-[50vh] flex flex-col justify-center">
-        {/* Animated Headline Section */}
+        {/* Animated Headline Section - unchanged */}
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 80 }}
@@ -180,10 +222,15 @@ const GoodAt = () => {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-full"></div>
-              <span className="text-3xl mb-1">{skill.icon}</span>
+              {/* Replaced emoji with image */}
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="w-12 h-12 object-contain mb-1"
+              />
               <span className="text-white text-xs font-medium mt-1">{skill.name}</span>
 
-              {/* Floating sparkles */}
+              {/* Floating sparkles - unchanged */}
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
@@ -240,10 +287,15 @@ const GoodAt = () => {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-full"></div>
-              <span className="text-3xl mb-1">{skill.icon}</span>
+              {/* Replaced emoji with image */}
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="w-12 h-12 object-contain mb-1"
+              />
               <span className="text-white text-xs font-medium mt-1">{skill.name}</span>
 
-              {/* Floating sparkles */}
+              {/* Floating sparkles - unchanged */}
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
