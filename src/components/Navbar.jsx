@@ -100,7 +100,7 @@ const Navbar = () => {
           <button className="w-full glow-button mt-3 px-5 py-3 rounded-full text-white font-bold
                             bg-gradient-to-r from-cyan-500 to-blue-600 transform transition-transform
                             hover:scale-105">
-            Download CV
+            Start Building Together
           </button>
         </div>
       </div>
