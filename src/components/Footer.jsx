@@ -1,39 +1,49 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFacebook, FaHeart } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 function Footer() {
+
   // Social media links with actual URLs
   const socialLinks = [
     {
       Icon: FaGithub,
       url: 'https://github.com/Maharab24',
-
       target: '_blank',
-      rel: 'noopener noreferrer'
+      rel: 'noopener noreferrer',
+
     },
     {
       Icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/maharab-hossain-opi-548294228/',
-
       target: '_blank',
-      rel: 'noopener noreferrer'
+      rel: 'noopener noreferrer',
+
     },
     {
       Icon: FaFacebook,
       url: 'https://www.facebook.com/maharab.hossain.opi.2024/',
-
       target: '_blank',
-      rel: 'noopener noreferrer'
-    },
-{
-  Icon: SiGmail,
-  url: 'https://mail.google.com/mail/?view=cm&fs=1&to=maharabhossainopi24@gmail.com',
-  target: '_blank',
-  rel: 'noopener noreferrer'
-}
+      rel: 'noopener noreferrer',
 
+    },
+    {
+      Icon: SiGmail,
+      url: 'https://mail.google.com/mail/?view=cm&fs=1&to=maharabhossainopi24@gmail.com',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    
+    }
+  ];
+
+  // Navigation links with proper routing
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Skills', path: '/skills' }
   ];
 
   return (
@@ -144,7 +154,6 @@ function Footer() {
               transition={{ delay: 0.4 }}
             >
               Let’s discuss how we can work together —<span className="text-cyan-300 font-medium">reach out below</span>
-
             </motion.p>
 
             <motion.div
@@ -196,37 +205,38 @@ function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-5">
-              {['Home', 'About', 'Projects', 'Skills'].map((item, index) => (
+              {navLinks.map((link, index) => (
                 <motion.li
                   key={index}
                   initial={{ x: -30, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.4 + index * 0.1, type: "spring" }}
                 >
-                  <motion.a
-                    href={`#${item.toLowerCase()}`}
-                    className="text-cyan-100/90 hover:text-white flex items-center group text-lg font-medium"
-                    whileHover={{
-                      x: 15,
-                      color: '#ff00ea',
-                      textShadow: '0 0 10px rgba(255, 0, 234, 0.7)'
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.span
-                      className="w-3 h-3 bg-cyan-400 rounded-full mr-4 group-hover:bg-fuchsia-500"
-                      animate={{
-                        scale: [1, 1.4, 1],
-                        boxShadow: ['0 0 0 0 rgba(0, 247, 255, 0)', '0 0 0 6px rgba(0, 247, 255, 0.3)', '0 0 0 0 rgba(0, 247, 255, 0)']
+                  <Link to={link.path}>
+                    <motion.div
+                      className="text-cyan-100/90 hover:text-white flex items-center group text-lg font-medium"
+                      whileHover={{
+                        x: 15,
+                        color: '#ff00ea',
+                        textShadow: '0 0 10px rgba(255, 0, 234, 0.7)'
                       }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: index * 0.2
-                      }}
-                    ></motion.span>
-                    {item}
-                  </motion.a>
+                      transition={{ duration: 0.3 }}
+                    >
+                      <motion.span
+                        className="w-3 h-3 bg-cyan-400 rounded-full mr-4 group-hover:bg-fuchsia-500"
+                        animate={{
+                          scale: [1, 1.4, 1],
+                          boxShadow: ['0 0 0 0 rgba(0, 247, 255, 0)', '0 0 0 6px rgba(0, 247, 255, 0.3)', '0 0 0 0 rgba(0, 247, 255, 0)']
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: index * 0.2
+                        }}
+                      ></motion.span>
+                      {link.name}
+                    </motion.div>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
