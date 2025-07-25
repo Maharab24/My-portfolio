@@ -29,10 +29,11 @@ function Footer() {
     },
 {
   Icon: SiGmail,
-  url: 'https://mail.google.com/mail/?view=cm&to=maharabhossainopi24@gmail.com&su=',
+  url: 'https://mail.google.com/mail/?view=cm&fs=1&to=maharabhossainopi24@gmail.com',
   target: '_blank',
   rel: 'noopener noreferrer'
 }
+
   ];
 
   return (
