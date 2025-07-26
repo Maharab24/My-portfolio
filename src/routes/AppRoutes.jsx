@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MyLayout from "../layout/myLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Projects from "../pages/Projects";
+import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
 
 // Export your router
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/projects", element: <Projects /> },
+      { path: "/skills", element: <Skills /> },
       { path: "/contact", element: <Contact /> },
     ],
   },

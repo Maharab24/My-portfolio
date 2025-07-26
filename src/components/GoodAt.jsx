@@ -27,6 +27,7 @@ import jwt from '../assets/skillSet/jwt.png';
 import mySQL from '../assets/skillSet/mySql.png';
 import research from '../assets/skillSet/research.png';
 import visualStudio from '../assets/skillSet/visualStudio.png';
+import nodeJs from '../assets/skillSet/nodeJs.png';
 
 
 
@@ -59,6 +60,7 @@ const skills = [
   { name: "IoT", color: "rgba(100, 181, 246, 0.7)", image: IoT },
   { name: "", color: "rgba(255, 143, 0, 0.7)", image: jwt },
   { name: "", color: "rgba(0, 150, 136, 0.7)", image: mySQL },
+    { name: "Node JS", color: "rgba(33, 150, 243, 0.7)", image: nodeJs },
   { name: "Research", color: "rgba(139, 195, 74, 0.7)", image: research },
   { name: "VS", color: "rgba(33, 150, 243, 0.7)", image: visualStudio }
 ];
