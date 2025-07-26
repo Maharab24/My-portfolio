@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaCode, FaServer, FaBrain, FaFlask, FaChessKnight, FaMicrochip, FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+
 
 // Import skill images
 import reactImg from '../assets/skillSet/react.png';
@@ -30,6 +32,11 @@ function Skills() {
         // Initialize scroll position
         window.scrollTo(0, 0);
       }, []);
+
+
+      const navigate = useNavigate();
+
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const controls = useAnimation();
@@ -125,8 +132,8 @@ function Skills() {
       skills: [],
       color: 'from-pink-500/20 to-rose-500/20',
       buttonColor: 'from-pink-500 to-rose-500',
-      action: 'Learn More',
-      actionLink: '/ai'
+      action: 'View Projects',
+      actionLink: '/AI'
     },
     {
       id: 'research',
@@ -264,7 +271,7 @@ function Skills() {
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"
+            className="mt-20 text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? {
               opacity: 1,
@@ -424,7 +431,7 @@ function Skills() {
                 </div>
               </div>
 
-              {/* Enhanced GO button - fixed at bottom */}
+
               <motion.button
                 className={`mt-6 w-full py-3 rounded-lg bg-gradient-to-r ${category.buttonColor} text-white font-bold flex items-center justify-center gap-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden group`}
                 whileHover={{
@@ -438,7 +445,8 @@ function Skills() {
                   }, 0.5)`
                 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => window.open(category.actionLink, '_blank')}
+               onClick={() => navigate(category.actionLink)}
+
               >
                 <span className="z-10 relative flex items-center gap-2">
                   {category.action}

@@ -34,17 +34,18 @@ function Footer() {
       url: 'https://mail.google.com/mail/?view=cm&fs=1&to=maharabhossainopi24@gmail.com',
       target: '_blank',
       rel: 'noopener noreferrer',
-    
+
     }
   ];
 
   // Navigation links with proper routing
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Skills', path: '/skills' }
-  ];
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  // Add hash to projects path
+  { name: 'Projects', path: { pathname: '/', hash: '#projects' } },
+  { name: 'Skills', path: '/skills' }
+];
 
   return (
     <motion.footer
