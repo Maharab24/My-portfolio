@@ -161,7 +161,7 @@ function Skills() {
       color: 'from-green-500/20 to-emerald-500/20',
       buttonColor: 'from-green-500 to-emerald-500',
       action: 'See Profile',
-      actionLink: 'https://codeforces.com/profile/Maharab_Hossain_Opi'
+      actionLink: '/Cp'
     },
     {
       id: 'iot',

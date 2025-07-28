@@ -102,6 +102,7 @@ const FieldsOfWork = ({id}) => {
       description: "Algorithm design, data structures, problem-solving, and coding competitions",
       color: "from-amber-400 to-orange-500",
       icon: "🏆",
+      path: "/Cp",
       animation: {
         hidden: { z: -500, scale: 0.2, opacity: 0, rotate: 45 },
         visible: {
