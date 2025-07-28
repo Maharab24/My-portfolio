@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaRocket, FaUser, FaExternalLinkAlt, FaCode, FaShoppingCart, FaBuilding, FaTasks, FaBlog, FaFilter, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaRocket, FaUser, FaExternalLinkAlt, FaCode, FaShoppingCart, FaBuilding, FaTasks, FaBlog, FaFilter, FaTimes ,FaGamepad,FaPlane,FaTicketAlt,FaShieldAlt} from 'react-icons/fa';
 
 function Web() {
   useEffect(() => {
@@ -70,24 +70,32 @@ function Web() {
   };
 
   // Get icon based on focus area
-  const getFocusIcon = (focusArea) => {
-    switch (focusArea) {
-      case 'Web Development':
-        return <FaCode className="text-blue-500" />;
-      case 'E-Commerce':
-        return <FaShoppingCart className="text-green-500" />;
-      case 'Civic Technology':
-        return <FaBuilding className="text-yellow-500" />;
-      case 'Productivity Tools':
-        return <FaTasks className="text-purple-500" />;
-      case 'Content Platform':
-        return <FaBlog className="text-cyan-500" />;
-      case 'Portfolio':
-        return <FaUser className="text-pink-500" />;
-      default:
-        return <FaCode className="text-blue-500" />;
-    }
-  };
+ const getFocusIcon = (focusArea) => {
+  switch (focusArea) {
+    case 'Web Development':
+      return <FaCode className="text-blue-500" />;
+    case 'E-Commerce':
+      return <FaShoppingCart className="text-green-500" />;
+    case 'Civic Technology':
+      return <FaBuilding className="text-yellow-500" />;
+    case 'Productivity Tools':
+      return <FaTasks className="text-purple-500" />;
+    case 'Content Platform':
+      return <FaBlog className="text-cyan-500" />;
+    case 'Portfolio':
+      return <FaUser className="text-pink-500" />;
+    case 'Gaming':
+      return <FaGamepad className="text-red-500" />;
+    case 'Travel Agency':
+      return <FaPlane className="text-teal-500" />;
+    case 'E-Ticketing':
+      return <FaTicketAlt className="text-indigo-500" />;
+    case 'Anti-Corruption':
+      return <FaShieldAlt className="text-orange-600" />;
+    default:
+      return <FaCode className="text-blue-500" />;
+  }
+};
 
   // Get status color
   const getStatusColor = (status) => {
@@ -110,6 +118,8 @@ function Web() {
         return 'bg-cyan-900/30 text-cyan-400';
       case 'Full Stack Web App':
         return 'bg-emerald-900/30 text-emerald-400';
+      case 'Game':
+        return 'bg-cyan-900/30 text-pink-400';
       default:
         return 'bg-gray-700/30 text-gray-400';
     }

@@ -11,7 +11,8 @@
   {
     "title": "Crave House",
     "description": "A beautiful and responsive restaurant landing page built with ReactJS, Tailwind CSS, Vite, and a Custom API. This project showcases a modern and interactive web experience for users to explore delicious dishes, view ingredients, and manage their cart seamlessly.",
-    "technologies": ["ReactJs", "Custom API", "Tailwind CSS"],
+    "technologies": ["ReactJs", "Custom API", "Tailwind CSS","Vite",
+  "Responsive Design"],
     "focusArea": "E-Commerce",
     "type": "Web App",
     "status": "Completed",
@@ -20,28 +21,73 @@
   },
   {
     "title": "Transparency Bangladesh",
-    "description": "An anti-corruption platform that allows users to report issues, visualize data, and access educational resources on corruption.",
-    "technologies": ["React", "PHP", "MySQL", "Heatmap.js", "Tailwind CSS"],
-    "focusArea": "Civic Technology",
+    "description": "This is an anti corruption web application that provides a platform for citizens. Full description comming soon...",
+    "technologies": ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS","Responsive Design","Admin Dashboard","User Authentication","User Dashboard","Admin authentication"],
+    "focusArea": "Anti-Corruption",
     "type": "Full Stack Web App",
     "status": "In Progress"
   },
+
   {
-    "title": "Task Flow Manager",
-    "description": "A task and project management tool for small teams, with deadlines, priority tagging, and collaborative boards.",
-    "technologies": ["Next.js", "Firebase", "Tailwind CSS", "DaisyUI"],
-    "focusArea": "Productivity Tools",
-    "type": "Web App",
-    "status": "Planned",
-    "github": "https://github.com/Maharab24/task-flow-manager"
-  },
-  {
-    "title": "BlogSphere",
-    "description": "A blogging platform where users can write, edit, and publish articles with markdown support and SEO optimization.",
-    "technologies": ["Node.js", "Express", "EJS", "MongoDB", "Bootstrap"],
+    "title": "Blog Pulse",
+    "description": "This is a minimal and responsive blog website . This is just a demo project to showcase my skills in web development. Mainly foused on funtionality ",
+    "technologies": ["ReactJS", "Tailwind CSS", "Vite", "DaisyUI", "Responsive Design", "Custom API"],
     "focusArea": "Content Platform",
     "type": "Web App",
     "status": "Completed",
-    "github": "https://github.com/Maharab24/blogsphere"
+    "github": "https://github.com/Maharab24/BlogPulse"
+  },
+  {
+    "title": "Bottle Collection Shop",
+    "description": "Bottle Collection is a simple, responsive e-commerce web application built with ReactJS, Vite, and a custom API. Users can browse a collection of bottles, view details, and add their desired bottles to a cart — simulating an online shopping experience. Mainly focused on functionality and responsive design, this project showcases the use of modern web technologies to create a user-friendly interface.",
+    "technologies": ["ReactJS", "Tailwind CSS", "Vite", "DaisyUI", "Responsive Design", "Custom API"],
+    "focusArea": "E-Commerce",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/Bottle-Collection",
+    "liveDemo": "https://bottle-collection.surge.sh/"
+  },
+  {
+    "title": "Onlie Phone Shop",
+    "description": "An online phone store built with HTML, CSS, JavaScript featuring a clean UI and a custom API backend. Mainly foucsed on intregating API and functionality by using JavaScript.",
+    "technologies": ["HTML","CSS","JavaScript","Custom API","Tailwind CSS"],
+    "focusArea": "E-Commerce",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/Online-Phone-shop",
+    "liveDemo": "https://maharab24.github.io/Online-Phone-shop/"
+  },
+   {
+    "title": "Jatra Poribohon E-ticketing System",
+    "description": "An interactive web-based e-ticketing platform for bus travel built. Allows users to book and manage bus ticket reservations via a clear and responsive interface. Features include Responive UI, Seat availability, and Booking management.",
+    "technologies": ["HTML","CSS","JavaScript","Tailwind CSS"],
+    "focusArea": "E-Ticketing",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/Jatra-Poribohon-E-ticket-",
+    "liveDemo": "https://maharab24.github.io/Jatra-Poribohon-E-ticket-/"
+  },
+     {
+    "title": "Alphabet Game",
+    "description": "A game designed to help people to increase their typing speed and accuracy. The game presents a series of random letters, and the player must type them as quickly and accurately as possible. The game tracks the time taken to type each letter and calculates the player's typing words and increase score based on their performance.",
+    "technologies": ["HTML","CSS","JavaScript","Tailwind CSS"],
+    "focusArea": "Gamming",
+    "type": "Game",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/Alphabet-Game",
+    "liveDemo": "https://maharab24.github.io/Alphabet-Game/"
+  },
+      {
+    "title": "Walk Abroad",
+    "description": "A simple and responsive travel agency website built with HTML, CSS. This project showcases a modern and interactive web experience for users to explore various travel destinations, view details, and manage their bookings seamlessly.",
+    "technologies": ["HTML","CSS"],
+    "focusArea": "Travel Agency",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/Alphabet-Game",
+    "liveDemo": "https://maharab24.github.io/Alphabet-Game/"
   }
+
+
+
 ]
