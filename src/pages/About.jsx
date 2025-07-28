@@ -58,7 +58,7 @@ function About() {
     {
       image: school,
       title: "School",
-      description: "Brahmanbaria Govt. High School",
+      description: "Hasan Ali Government High School, Chandpur",
       year: "2016-2018",
       achievements: "GPA 5.0 in SSC"
     }

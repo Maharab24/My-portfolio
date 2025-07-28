@@ -229,13 +229,16 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.6 }}
           >
-            <motion.button
+          
+            <motion.a
+              href="/Maharab_Hossain_CV.pdf"
+              download="Maharab_Hossain_CV.pdf"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-full glow-button"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-             Download CV
-            </motion.button>
+              Download CV
+            </motion.a>
 
             <motion.a
               href="#projects"

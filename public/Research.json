@@ -1,0 +1,12 @@
+[
+  {
+    "title": "AI for Sustainable Campuses Saving Resources with Smart Tech",
+    "status": "Completed",
+    "category": "Artificial Intelligence",
+    "abstract": "Sustainability is increasingly vital in today's world. To minimize waste, we need innovative strategies to protect resources. University campuses are ideal environments for implementing sustainable practices, given their numerous buildings, energy systems, and transportation networks. This paper explores how Artificial Intelligence (AI) can enhance campus sustainability by conserving energy, minimizing waste, and improving energy efficiency. While AI is already utilized in various industries to predict equipment failures, reduce energy consumption, and streamline processes, its application on campuses remains limited. The challenge lies in the unique characteristics of campuses compared to industrial settings, and the absence of clear strategies for using  AI for sustainability in these environments. To address this, we propose a detailed plan for integrating AI technologies on campuses. AI can facilitate energy savings in buildings, optimize waste management, and enhance the efficiency of transportation systems. Our research aims to produce two key outcomes: a framework that other campuses can adopt to achieve sustainability through AI, and a model demonstrating how campuses can function as smaller-scale versions of industries to experiment with new ideas.",
+    "methods": ["Sensor Data", "Historical Records", "External APIs"],
+    "findings": ["Energy Management", "Water Conservation", "Waste Reduction", "Transportation Optimization" ],
+    "paperLink": "https://github.com/Maharab24/AI-for-Sustainable-Campuses-Saving-Resources-with-Smart-Technology",
+    "github": "https://github.com/Maharab24/AI-for-Sustainable-Campuses-Saving-Resources-with-Smart-Technology"
+  }
+]

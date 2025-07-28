@@ -6,6 +6,7 @@ import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
 import AI from "../pages/AI";
 import Web from "../pages/Web";
+import Research from "../pages/Research";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/AI", element: <AI /> },
       { path: "/Web", element: <Web /> },
+      { path: "/Research", element: <Research /> },
     ],
   },
 ]);

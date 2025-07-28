@@ -146,7 +146,7 @@ function Skills() {
       color: 'from-yellow-500/20 to-amber-500/20',
       buttonColor: 'from-yellow-500 to-amber-500',
       action: 'View Research',
-      actionLink: 'https://github.com/Maharab24/AI-for-Sustainable-Campuses-Saving-Resources-with-Smart-Technology'
+      actionLink: '/Research'
     },
     {
       id: 'competitive',

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { path } from 'framer-motion/client';
 
 const FieldsOfWork = ({id}) => {
   const containerRef = useRef(null);
@@ -72,6 +73,7 @@ const FieldsOfWork = ({id}) => {
       description: "Cutting-edge technology research, academic publications, and innovative problem solving",
       color: "from-green-400 to-emerald-500",
       icon: "🔬",
+      path: "/Research",
       animation: {
         hidden: { z: -500, scale: 0.2, opacity: 0, rotateZ: -20 },
         visible: {
