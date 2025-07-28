@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaRocket, FaExternalLinkAlt, FaBrain, FaChartLine, FaRobot, FaFilter, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaRocket, FaUser, FaExternalLinkAlt, FaCode, FaShoppingCart, FaBuilding, FaTasks, FaBlog, FaFilter, FaTimes } from 'react-icons/fa';
 
-function AI() {
+function Web() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,7 +19,7 @@ function AI() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/AI.json');
+        const response = await fetch('/Web.json');
         const data = await response.json();
         setProjects(data);
         setLoading(false);
@@ -71,23 +71,27 @@ function AI() {
 
   // Get icon based on focus area
   const getFocusIcon = (focusArea) => {
-    switch(focusArea) {
-      case 'Natural Language Processing (NLP)':
-        return <FaBrain className="text-blue-500" />;
-      case 'Smart Cities & Sustainability':
-        return <FaChartLine className="text-green-500" />;
-      case 'Data Visualization & Predictive Analytics':
-        return <FaChartLine className="text-purple-500" />;
-      case 'Recommendation Systems':
-        return <FaRobot className="text-yellow-500" />;
+    switch (focusArea) {
+      case 'Web Development':
+        return <FaCode className="text-blue-500" />;
+      case 'E-Commerce':
+        return <FaShoppingCart className="text-green-500" />;
+      case 'Civic Technology':
+        return <FaBuilding className="text-yellow-500" />;
+      case 'Productivity Tools':
+        return <FaTasks className="text-purple-500" />;
+      case 'Content Platform':
+        return <FaBlog className="text-cyan-500" />;
+      case 'Portfolio':
+        return <FaUser className="text-pink-500" />;
       default:
-        return <FaBrain className="text-blue-500" />;
+        return <FaCode className="text-blue-500" />;
     }
   };
 
   // Get status color
   const getStatusColor = (status) => {
-    switch(status) {
+    switch (status) {
       case 'Completed':
         return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'In Progress':
@@ -101,15 +105,11 @@ function AI() {
 
   // Get type color
   const getTypeColor = (type) => {
-    switch(type) {
+    switch (type) {
       case 'Web App':
         return 'bg-cyan-900/30 text-cyan-400';
-      case 'Research':
+      case 'Full Stack Web App':
         return 'bg-emerald-900/30 text-emerald-400';
-      case 'Visualization Tool':
-        return 'bg-purple-900/30 text-purple-400';
-      case 'Mobile App':
-        return 'bg-amber-900/30 text-amber-400';
       default:
         return 'bg-gray-700/30 text-gray-400';
     }
@@ -129,7 +129,7 @@ function AI() {
 
   return (
     <div
-      id="ai-projects"
+      id="web-projects"
       className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] py-16 px-4 md:px-8 overflow-hidden relative scroll-mt-24"
     >
       {/* Animated background elements */}
@@ -216,7 +216,7 @@ function AI() {
               }
             }}
           >
-            Artificial Intelligence Projects
+            Web Development Projects
           </motion.h1>
           <motion.div
             className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"
@@ -230,7 +230,7 @@ function AI() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Exploring the intersection of artificial intelligence and real-world problem solving
+            Building modern, responsive, and user-friendly web applications
           </motion.p>
         </motion.div>
 
@@ -548,7 +548,7 @@ function AI() {
                       )}
                     </>
                   ) : (
-                    // Animated "Coming Soon..." for In Progress/Planned projects
+                    // "Coming Soon..." for In Progress/Planned projects
                     <motion.div
                       className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl"
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -610,6 +610,7 @@ function AI() {
                         >
                           .
                         </motion.span>
+
                         <motion.span
                           animate={{ y: [0, -5, 0] }}
                           transition={{
@@ -620,6 +621,7 @@ function AI() {
                         >
                           .
                         </motion.span>
+
                         <motion.span
                           animate={{ y: [0, -5, 0] }}
                           transition={{
@@ -630,6 +632,7 @@ function AI() {
                         >
                           .
                         </motion.span>
+
                       </motion.div>
                     </motion.div>
                   )}
@@ -640,15 +643,15 @@ function AI() {
         )}
       </AnimatePresence>
 
-      {/* Floating decorative AI icons */}
+      {/* Floating decorative icons */}
       <div className="absolute top-1/4 left-10 opacity-20">
-        <FaBrain className="text-6xl text-blue-500" />
+        <FaCode className="text-6xl text-blue-500" />
       </div>
       <div className="absolute bottom-1/3 right-10 opacity-20">
-        <FaRobot className="text-6xl text-purple-500" />
+        <FaShoppingCart className="text-6xl text-green-500" />
       </div>
     </div>
   );
 }
 
-export default AI;
+export default Web;

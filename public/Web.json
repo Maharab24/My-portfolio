@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Smart Portfolio Website",
+    "description": "A responsive personal portfolio website built to showcase projects, skills, and experiences using modern web technologies.",
+    "technologies": ["React", "Tailwind CSS", "Framer Motion", "Custom API", "Responsive Design"],
+    "focusArea": "Portfolio",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/My_protfolio"
+  },
+  {
+    "title": "Crave House",
+    "description": "A beautiful and responsive restaurant landing page built with ReactJS, Tailwind CSS, Vite, and a Custom API. This project showcases a modern and interactive web experience for users to explore delicious dishes, view ingredients, and manage their cart seamlessly.",
+    "technologies": ["ReactJs", "Custom API", "Tailwind CSS"],
+    "focusArea": "E-Commerce",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/bookbazaar",
+    "liveDemo": "http://crave-house.surge.sh/"
+  },
+  {
+    "title": "Transparency Bangladesh",
+    "description": "An anti-corruption platform that allows users to report issues, visualize data, and access educational resources on corruption.",
+    "technologies": ["React", "PHP", "MySQL", "Heatmap.js", "Tailwind CSS"],
+    "focusArea": "Civic Technology",
+    "type": "Full Stack Web App",
+    "status": "In Progress"
+  },
+  {
+    "title": "Task Flow Manager",
+    "description": "A task and project management tool for small teams, with deadlines, priority tagging, and collaborative boards.",
+    "technologies": ["Next.js", "Firebase", "Tailwind CSS", "DaisyUI"],
+    "focusArea": "Productivity Tools",
+    "type": "Web App",
+    "status": "Planned",
+    "github": "https://github.com/Maharab24/task-flow-manager"
+  },
+  {
+    "title": "BlogSphere",
+    "description": "A blogging platform where users can write, edit, and publish articles with markdown support and SEO optimization.",
+    "technologies": ["Node.js", "Express", "EJS", "MongoDB", "Bootstrap"],
+    "focusArea": "Content Platform",
+    "type": "Web App",
+    "status": "Completed",
+    "github": "https://github.com/Maharab24/blogsphere"
+  }
+]

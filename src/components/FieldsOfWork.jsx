@@ -43,6 +43,7 @@ const FieldsOfWork = ({id}) => {
       description: "Full-stack applications, responsive UIs, modern frameworks, and API integrations",
       color: "from-cyan-400 to-blue-500",
       icon: "💻",
+      path: "/Web",
       animation: {
         hidden: { z: -500, scale: 0.2, opacity: 0, rotateX: 30 },
         visible: {
@@ -205,7 +206,7 @@ const FieldsOfWork = ({id}) => {
     <div
       id={id}
       ref={containerRef}
-     
+
       className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e2a3b] py-20 px-4 sm:px-8 overflow-hidden relative scroll-mt-24"
     >
       {/* Animated background elements */}

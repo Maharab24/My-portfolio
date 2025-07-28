@@ -109,7 +109,7 @@ function Skills() {
       color: 'from-cyan-500/20 to-blue-500/20',
       buttonColor: 'from-cyan-500 to-blue-500',
       action: 'View Projects',
-      actionLink: '/projects'
+      actionLink: '/Web'
     },
     {
       id: 'programming',

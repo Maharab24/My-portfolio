@@ -5,8 +5,9 @@ import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Contact from "../pages/Contact";
 import AI from "../pages/AI";
+import Web from "../pages/Web";
 
-// Export your router
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      // Redirect old projects path to home with hash
+
       {
         path: "/projects",
         element: <Navigate to={{ pathname: '/', hash: '#projects' }} replace />
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/skills", element: <Skills /> },
       { path: "/contact", element: <Contact /> },
       { path: "/AI", element: <AI /> },
+      { path: "/Web", element: <Web /> },
     ],
   },
 ]);
