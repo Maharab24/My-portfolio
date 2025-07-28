@@ -1,0 +1,13 @@
+[
+  {
+    "title": "ParaGuard: Automated Healthcare System for Paralysis Patients",
+    "description": "The ParaGuard project is an innovative automated healthcare system designed to support paralysis patients by enhancing their ability to communicate and receive timely care. Focused on individuals with limited but functional muscle movement—such as in the fingers—this system utilizes flex sensors to detect specific finger motions (e.g., index or middle finger) and translates them into actionable commands like calling for help or requesting access to the washroom. By leveraging this minimal mobility, the system provides a vital communication bridge between patients and caregivers, significantly improving the quality of life and autonomy for those affected by paralysis due to spinal cord injuries, strokes, or neurological disorders.",
+
+    "technologies": ["Arduino", "IoT", "Sensors", "GSM Module", "ECG", "Temperature Sensor", "LCD"],
+    "focusArea": "Healthcare Technology",
+    "type": "Hardware + IoT Project",
+    "status": "Completed",
+    "video": "https://youtu.be/2OaxAa5yZnw",
+    "report": "https://drive.google.com/file/d/1VdpjfkvpqjR12DFZvf5t_OZ0ejAVLhVj/view?usp=sharing"
+  }
+]

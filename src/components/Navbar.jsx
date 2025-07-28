@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,11 +23,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed w-full z-50 transition-all duration-500 ${scrolled
           ? 'bg-[#0f172a] shadow-xl py-3 backdrop-blur-md'
           : 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 py-4'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -50,21 +49,24 @@ const Navbar = () => {
 
           {/* Right-aligned Hire Me button */}
           <div className="hidden md:block">
-            <button className="relative glow-button px-7 py-3 rounded-full text-white font-bold
-                              bg-gradient-to-r from-cyan-500 to-blue-600 transition-all
-                              duration-500 hover:from-cyan-400 hover:to-blue-500 hover:scale-105
-                              shadow-lg transform transition-transform">
-              Start Building Together
-            </button>
+            <Link to="/contact">
+              <button
+                className="relative glow-button px-7 py-3 rounded-full text-white font-bold
+               bg-gradient-to-r from-cyan-500 to-blue-600 transition-all
+               duration-500 hover:from-cyan-400 hover:to-blue-500 hover:scale-105
+               shadow-lg transform transition-transform"
+              >
+                Start Building Together
+              </button>
+            </Link>
           </div>
 
           {/* Mobile menu button with animation */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`text-white focus:outline-none transition-transform duration-300 ${
-                isOpen ? 'rotate-90' : ''
-              }`}
+              className={`text-white focus:outline-none transition-transform duration-300 ${isOpen ? 'rotate-90' : ''
+                }`}
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -82,9 +84,8 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu with enhanced animation */}
-      <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-      }`}>
+      <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
         <div className="px-4 pt-4 pb-5 space-y-3 bg-gradient-to-b from-indigo-900 to-purple-900 rounded-b-xl">
           {navItems.map((item) => (
             <Link
@@ -98,11 +99,16 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <button className="w-full glow-button mt-3 px-5 py-3 rounded-full text-white font-bold
-                            bg-gradient-to-r from-cyan-500 to-blue-600 transform transition-transform
-                            hover:scale-105">
-            Start Building Together
-          </button>
+          <Link to="/contact">
+            <button
+              className="relative glow-button px-7 py-3 rounded-full text-white font-bold
+               bg-gradient-to-r from-cyan-500 to-blue-600 transition-all
+               duration-500 hover:from-cyan-400 hover:to-blue-500 hover:scale-105
+               shadow-lg transform transition-transform"
+            >
+              Start Building Together
+            </button>
+          </Link>
         </div>
       </div>
 

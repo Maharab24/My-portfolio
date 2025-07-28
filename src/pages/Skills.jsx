@@ -3,7 +3,6 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaCode, FaServer, FaBrain, FaFlask, FaChessKnight, FaMicrochip, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-
 // Import skill images
 import reactImg from '../assets/skillSet/react.png';
 import javascriptImg from '../assets/skillSet/js.png';
@@ -28,20 +27,15 @@ import daisyUi from '../assets/skillSet/daisyUi.png';
 import codeforces from '../assets/skillSet/codeforces.png';
 
 function Skills() {
-       useEffect(() => {
-        // Initialize scroll position
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-
-      const navigate = useNavigate();
-
-
+  const navigate = useNavigate();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const controls = useAnimation();
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -109,7 +103,8 @@ function Skills() {
       color: 'from-cyan-500/20 to-blue-500/20',
       buttonColor: 'from-cyan-500 to-blue-500',
       action: 'View Projects',
-      actionLink: '/Web'
+      actionLink: '/Web',
+      isExternal: false
     },
     {
       id: 'programming',
@@ -122,7 +117,8 @@ function Skills() {
       color: 'from-purple-500/20 to-indigo-500/20',
       buttonColor: 'from-purple-500 to-indigo-500',
       action: 'See Code Examples',
-      actionLink: '/code'
+      actionLink: "https://github.com/Maharab24/All-topics-of-coding",
+      isExternal: true
     },
     {
       id: 'ai',
@@ -133,7 +129,8 @@ function Skills() {
       color: 'from-pink-500/20 to-rose-500/20',
       buttonColor: 'from-pink-500 to-rose-500',
       action: 'View Projects',
-      actionLink: '/AI'
+      actionLink: '/AI',
+      isExternal: false
     },
     {
       id: 'research',
@@ -146,7 +143,8 @@ function Skills() {
       color: 'from-yellow-500/20 to-amber-500/20',
       buttonColor: 'from-yellow-500 to-amber-500',
       action: 'View Research',
-      actionLink: '/Research'
+      actionLink: '/Research',
+      isExternal: false
     },
     {
       id: 'competitive',
@@ -161,7 +159,8 @@ function Skills() {
       color: 'from-green-500/20 to-emerald-500/20',
       buttonColor: 'from-green-500 to-emerald-500',
       action: 'See Profile',
-      actionLink: '/Cp'
+      actionLink: '/Cp',
+      isExternal: false
     },
     {
       id: 'iot',
@@ -177,11 +176,12 @@ function Skills() {
       color: 'from-red-500/20 to-orange-500/20',
       buttonColor: 'from-red-500 to-orange-500',
       action: 'View Projects',
-      actionLink: '/iot'
+      actionLink: '/Iot',
+      isExternal: false
     }
   ];
 
-  // Skill badge component with optional image
+  // Skill badge component
   const SkillBadge = ({ skill }) => (
     <motion.div
       className="bg-gray-800/50 text-white px-3 py-1.5 rounded-full text-sm flex items-center gap-2"
@@ -197,6 +197,15 @@ function Skills() {
       <span>{skill}</span>
     </motion.div>
   );
+
+  // Handle button click
+  const handleButtonClick = (category) => {
+    if (category.isExternal) {
+      window.open(category.actionLink, '_blank', 'noopener,noreferrer');
+    } else {
+      navigate(category.actionLink);
+    }
+  };
 
   return (
     <div
@@ -445,8 +454,7 @@ function Skills() {
                   }, 0.5)`
                 }}
                 whileTap={{ scale: 0.98 }}
-               onClick={() => navigate(category.actionLink)}
-
+                onClick={() => handleButtonClick(category)}
               >
                 <span className="z-10 relative flex items-center gap-2">
                   {category.action}

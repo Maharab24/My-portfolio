@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaChartLine, FaExternalLinkAlt, FaLightbulb, FaBrain, FaRocket, FaCogs } from 'react-icons/fa';
 import Codeforce from '../assets/skillSet/codeforces.png';
 import Leetcode from '../assets/skillSet/leetcode.png';
 function Cp() {
+
+           useEffect(() => {
+            // Initialize scroll position
+            window.scrollTo(0, 0);
+          }, []);
   // State for competitive programming stats
   const [cpStats, setCpStats] = useState({
     codeforces: {

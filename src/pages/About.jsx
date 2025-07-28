@@ -452,16 +452,7 @@ function About() {
             transition={{ duration: 1, delay: 1.4 }}
           />
 
-          <motion.div
-            className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold px-8 py-4 rounded-full text-lg"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 25px rgba(139, 92, 246, 0.5)"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Let's Create Something Amazing Together
-          </motion.div>
+          
         </motion.div>
       </div>
     </div>

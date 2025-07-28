@@ -95,7 +95,7 @@ const skills = [
   return (
     <div
       ref={containerRef}
-      className=" h-[75vh]  bg-gradient-to-br from-[#0f172a] to-[#1e2a3b] py-20 px-4 overflow-hidden relative"
+      className=" min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e2a3b] py-20 px-4 overflow-hidden relative"
     >
       {/* Animated background elements - unchanged */}
       <motion.div

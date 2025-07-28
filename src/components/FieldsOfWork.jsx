@@ -131,6 +131,7 @@ const FieldsOfWork = ({id}) => {
       description: "Connected devices, sensor networks, embedded firmware, and smart hardware solutions",
       color: "from-rose-500 to-pink-600",
       icon: "🌐",
+      path: "/iot",
       animation: {
         hidden: { z: -500, scale: 0.2, opacity: 0, rotateX: -30, rotateY: 30 },
         visible: {
