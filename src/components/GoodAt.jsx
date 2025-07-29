@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-// Import all skill images
+
 import reactImg from '../assets/skillSet/react.png';
 import javascriptImg from '../assets/skillSet/js.png';
 

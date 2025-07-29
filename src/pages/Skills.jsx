@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaCode, FaServer, FaBrain, FaFlask, FaChessKnight, FaMicrochip, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-// Import skill images
+
 import reactImg from '../assets/skillSet/react.png';
 import javascriptImg from '../assets/skillSet/js.png';
 import pythonImg from '../assets/skillSet/python.png';

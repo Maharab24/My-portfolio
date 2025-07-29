@@ -6,10 +6,10 @@ import Leetcode from '../assets/skillSet/leetcode.png';
 function Cp() {
 
            useEffect(() => {
-            // Initialize scroll position
             window.scrollTo(0, 0);
           }, []);
-  // State for competitive programming stats
+
+
   const [cpStats, setCpStats] = useState({
     codeforces: {
       handle: "Maharab_Hossain_Opi",
@@ -40,7 +40,7 @@ function Cp() {
     ]
   });
 
-  // Update ratings dynamically
+  // Update ratings
   const updateRating = (platform, value) => {
     setCpStats(prev => ({
       ...prev,
@@ -50,7 +50,7 @@ function Cp() {
       }
     }));
 
-    // Update max rating if needed
+    // Update max rating 
     if (platform === 'codeforces' && value > prev.codeforces.maxRating) {
       setCpStats(prev => ({
         ...prev,

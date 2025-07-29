@@ -25,7 +25,7 @@ function Home() {
   return (
     <div>
       <Header />
-      {/* Add ID to FieldsOfWork section */}
+     
       <FieldsOfWork id="projects" />
       <GoodAt />
     </div>

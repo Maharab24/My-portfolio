@@ -2,7 +2,7 @@
   {
     "title": "Smart Portfolio Website",
     "description": "A responsive personal portfolio website built to showcase projects, skills, and experiences using modern web technologies.",
-    "technologies": ["React", "Tailwind CSS", "Framer Motion", "Custom API", "Responsive Design"],
+    "technologies": ["React","EmailJS", "Tailwind CSS", "Framer Motion", "Custom API", "Responsive Design"],
     "focusArea": "Portfolio",
     "type": "Web App",
     "status": "Completed",

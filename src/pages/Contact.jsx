@@ -8,7 +8,7 @@ import {
 
 const Contact = () => {
          useEffect(() => {
-          // Initialize scroll position
+
           window.scrollTo(0, 0);
         }, []);
   const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // null, 'success', or 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const formRef = useRef();
 
@@ -424,6 +424,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
+                    placeholder='Enter your  name'
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -443,6 +444,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
+                    placeholder='Enter your email'
                     value={formData.email}
                     onChange={handleChange}
                     required

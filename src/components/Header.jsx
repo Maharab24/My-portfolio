@@ -139,7 +139,7 @@ const Header = () => {
   return (
     <div
       ref={headerRef}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden relative cursor-default"
+      className="min-h-screen  flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden relative cursor-default"
     >
       {/* Floating particles container */}
       <div
@@ -229,7 +229,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.6 }}
           >
-          
+
             <motion.a
               href="/Maharab_Hossain_CV.pdf"
               download="Maharab_Hossain_CV.pdf"
